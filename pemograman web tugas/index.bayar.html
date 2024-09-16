@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembayaran</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+        background: #948e94;
+        }
+        h3{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Formulir Pemesanan Barang</h3>
+                <div class="d-grid gap-3 col-1 mx-auto mt-3 mb-3">
+                
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Alamat Billing</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label for="namaDepan">Nama Depan:</label>
+                            <input type="text" class="form-control" id="namaDepan" placeholder="Masukkan nama depan">
+                        </div>
+                        <div class="form-group">
+                            <label for="namaBelakang">Nama Belakang:</label>
+                            <input type="text" class="form-control" id="namaBelakang" placeholder="Masukkan nama belakang">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" placeholder="Masukkan username">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (Opsional):</label>
+                            <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat:</label>
+                            <textarea class="form-control" id="alamat" placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="kodePos">Kota/kabupaten:</label>
+                                <input type="text" class="form-control" id="kota" placeholder="kota/kabupaten">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="kodePos">Provinsi:</label>
+                                <input type="text" class="form-control" id="provinsi" placeholder="provinsi">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="kodePos">Kode Pos:</label>
+                                <input type="text" class="form-control" id="kodePos" placeholder="Masukkan kode pos">
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="alamatSama">
+                            <label class="form-check-label" for="alamatSama">Alamat pengiriman sama dengan alamat billing.</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="simpanInformasi">
+                            <label class="form-check-label" for="simpanInformasi">Simpan informasi ini untuk selanjutnya.</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Keranjang Belanja</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Nama Produk</th>
+                                    <th>Harga</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Crewneck Fila 3 Tone</td>
+                                    <td>Rp 250.000</td>
+                                </tr>
+                                <tr>
+                                    <td>New Balance 997H</td>
+                                    <td>Rp 1000.000</td>
+                                </tr>
+                                <tr>
+                                    <td>Jacket Dickies Outdor</td>
+                                    <td>Rp 500.000</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td><strong>Rp 1.675.000</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <hr>
+                    </div>
+                </div>
+                <hr>
+                <h4>Pembayaran</h4>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="kartuKredit" name="metodePembayaran" checked>
+                    <label class="form-check-label" for="kartuKredit">BRI</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="kartuDebit" name="metodePembayaran">
+                    <label class="form-check-label" for="kartuDebit">BNI</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="paypal" name="metodePembayaran">
+                    <label class="form-check-label" for="paypal">ShopeePay</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="paypal" name="metodePembayaran">
+                    <label class="form-check-label" for="paypal">OVO</label>
+                    <hr>
+                <div class="d-grid gap-2 col-4 mx-auto mt-3 mb-3">
+                <button class="btn btn-primary" type="button">Proses Pembayaran</button></div><a href="index.shophing.html" class="btn btn-success ">Kembali</a></div>
+            </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
